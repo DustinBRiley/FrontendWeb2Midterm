@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 export default function Cart() {
   return (
     <div>
-        <h1>Cart</h1>
+        <h1>Your Cart</h1>
+        <Cart/>
     </div>
   )
 }

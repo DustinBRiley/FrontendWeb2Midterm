@@ -1,3 +1,16 @@
-from add to cart button
-add quantity and remove from cart button
-// Use React state to manage the items in the cart, implementing functionality to add and remove products.
+import React from 'react'
+import {availProds} from "../components/data/data"
+import { CartContext } from '../components/context/cart-context'
+
+export default function Cart() {
+  const { cartItems, addToCart, removeFromCart } = useContext(CartContext)
+  return (
+    <div>
+      { availProds.map((product) => {
+        if(cartItems[product.id] > 0) {
+          return <CartItem data={product}/>
+        }
+      })}
+    </div>
+  )
+}
