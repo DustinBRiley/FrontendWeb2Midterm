@@ -11,7 +11,7 @@ export default function Products() {
                 name={prod.name}
                 image={prod.image}
                 price={prod.price}
-                ></Product>
+                />
             })}
         </div>
     );

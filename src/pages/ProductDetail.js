@@ -1,15 +1,24 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Products from "../components/Products"
+import Product from "../components/Product"
+import { availProds } from '../components/data/data'
 
 export default function ProductDetail() {
   const {id} = useParams()
   return (
     <div>
         <h1>ProductDetail</h1>
-        <Products>
-          
-        </Products>
+        { availProds.map((prod) => {
+          if(prod.id === id) {
+            return <Product
+            key={prod.id}
+            id={prod.id}
+            name={prod.name}
+            image={prod.image}
+            price={prod.price}
+            />;
+          }
+        })}
     </div>
   )
 }
