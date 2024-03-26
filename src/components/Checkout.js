@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 export default function Checkout() {
     const { cartItems, total } = useContext(CartContext)
 
-    const order = () => {
+    const order = () => { // clears cart item array
         for(let i=1;i<availProds.length + 1;i++) {
             cartItems[i] = 0;
         }
@@ -28,7 +28,7 @@ export default function Checkout() {
                     }
                 })}
             </div>
-            <form>
+            <form> {/* ran out of time to do form validation */}
                 <label htmlFor="address">Address: </label>
                 <input id='address'></input>
                 <br></br>

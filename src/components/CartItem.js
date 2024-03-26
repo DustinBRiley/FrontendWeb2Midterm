@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from "./context/cart-context";
 
-export default function CartItem({id,name,image,price,adjustTotal}) {
+export default function CartItem({id,name,image,price}) {
     const { addToCart, removeFromCart, cartItems } = useContext(CartContext)
   return (
     <div id="cartItem">
@@ -12,8 +12,8 @@ export default function CartItem({id,name,image,price,adjustTotal}) {
         </div>
         <div id="quantity">
           <p>Quantity: </p>
-          <p>{cartItems[id]}</p>
-          <div id='buttons'>
+          <p>{cartItems[id]}</p> {/* get quantity from cart item array by id */}
+          <div id='buttons'> {/* to hide buttons on checkout screen */}
             <button onClick={() => {removeFromCart(id)}}>-</button>
             <button onClick={() => {addToCart(id)}}>+</button>
           </div>

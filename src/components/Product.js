@@ -9,6 +9,7 @@ function Product({id,name,image,price}) {
             <img src={image}></img>
             <h2>{name}</h2>
             <h3>${price.toFixed(2)}</h3>
+            {/* button displays how many are in cart when > 0 */}
             <button onClick={() => addToCart(id)}>Add to Cart {cartItems[id] > 0 && <> ({cartItems[id]}) </>}</button>
             <Link to={`/productdetail/${id}`}>Details</Link>
         </div>

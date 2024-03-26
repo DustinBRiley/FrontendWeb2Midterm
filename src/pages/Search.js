@@ -11,7 +11,7 @@ export default function Search() {
         <input id="search" value={search} onChange={(e) => {setSearch(e.target.value)}}></input>
         <div id="searchResult">
         { availProds.map((prod) => {
-          if(prod.name.toLowerCase().includes(search.toLowerCase())) {
+          if(prod.name.toLowerCase().includes(search.toLowerCase())) { // to lower case helps match without case sensitivity
             return <Product
                   key={prod.id}
                   id={prod.id}
