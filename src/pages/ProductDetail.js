@@ -8,17 +8,20 @@ export default function ProductDetail() {
   return (
     <div>
         <h1>ProductDetail</h1>
-        { availProds.map((prod) => {
-          if(prod.id === id) {
-            return <Product
-            key={prod.id}
-            id={prod.id}
-            name={prod.name}
-            image={prod.image}
-            price={prod.price}
-            />;
-          }
-        })}
+          { availProds.map((prod) => {
+            if(prod.id == id) {
+              return <div id='productdetail'> <Product
+              key={prod.id}
+              id={prod.id}
+              name={prod.name}
+              image={prod.image}
+              price={prod.price}
+              />
+              <p>{prod.detail}</p>
+              </div>
+
+            }
+          })}
     </div>
   )
 }

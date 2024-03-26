@@ -1,4 +1,10 @@
+* {
+  margin: 0;
+}
+
 .App {
+  background-color:aliceblue;
+  height: 100vh;
   text-align: center;
 }
 
@@ -7,9 +13,90 @@
   pointer-events: none;
 }
 
-nav ul{
+nav {
+  background-color: grey;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
+
+img {
+  height: 80%;
+  width: 80%;
+}
+
+#shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#products {
+  border-style: groove;
+  width: 30%;
+}
+
+#searchResult {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#cart {
+  display: flex;
+  justify-content: space-around;
+}
+
+#cartItems {
+  border-style: solid;
+  width: 80%;
+  height: 80%;
+}
+
+#cartItem {
+  height: 200px;
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+#cartItem img {
+  border-style: solid;
+  height: auto;
+  max-width: 30%;
+}
+
+#cartItem button {
+  height: 20px;
+}
+
+#quantity {
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+}
+
+#checkout {
+  display: flex;
+  justify-content: space-around;
+}
+
+#checkout #cartItems {
+  width: 50%;
+}
+
+#checkout #buttons {
+  display: none;
+}
+
+#productdetail {
+  display: flex;
+  justify-content: space-around;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

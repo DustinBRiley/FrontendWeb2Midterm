@@ -3,7 +3,7 @@ import { availProds } from "./data/data";
 
 export default function Products() {
     return (
-        <div>
+        <div id="shop">
             {availProds.map( (prod) => {
                 return <Product
                 key={prod.id}

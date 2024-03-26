@@ -13,16 +13,19 @@ const defaultCart = () => {
 
 export const CartContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(defaultCart())
+    const [total, setTotal] = useState(0)
 
     const addToCart = (id) => {
         setCartItems((prev) => ({...prev, [id]: prev[id] + 1}))
+        setTotal((prev) => (prev += availProds[id-1].price))
     }
 
     const removeFromCart = (id) => {
         setCartItems((prev) => ({...prev, [id]: prev[id] - 1}))
+        setTotal((prev) => (prev -= availProds[id-1].price))
     }
 
-    const context = {cartItems, addToCart, removeFromCart}
+    const context = {cartItems, addToCart, removeFromCart, total}
 
     return <CartContext.Provider value={context}>{props.children}</CartContext.Provider>
 }

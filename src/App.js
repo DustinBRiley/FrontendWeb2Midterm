@@ -6,6 +6,7 @@ import Search from "./pages/Search"
 import CartPage from "./pages/CartPage"
 import ThankYou from "./pages/ThankYou"
 import Header from './pages/Header';
+import Checkout from './components/Checkout';
 import { CartContextProvider } from './components/context/cart-context';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/ProductDetail/:id" element={<ProductDetail></ProductDetail>}></Route>
             <Route path="/Search" element={<Search></Search>}></Route>
             <Route path="/Cart" element={<CartPage></CartPage>}></Route>
+            <Route path='/Checkout' element={<Checkout></Checkout>}></Route>
             <Route path="/ThankYou" element={<ThankYou></ThankYou>}></Route>
           </Routes>
         </BrowserRouter>
